@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import service from '../appwrite/configration'
 import PostCard from '../components/postCard'
-
+import { useNavigate } from 'react-router-dom'
 function MyPosts() {
-
+    const navigate = useNavigate()
     const [myPosts,setMyPosts] = useState([])
     const [loader,setLoader] = useState(true)
     const userdata = useSelector((state)=>state.userData)
@@ -39,6 +39,10 @@ function MyPosts() {
         
     },[]) 
     console.log(myPosts);
+
+    const handlecreatePost = ()=>{
+        navigate('/addPost')
+    }
     
     return (
         <>
@@ -48,19 +52,36 @@ function MyPosts() {
                         </div>
             ) : (
                 <>
-                    {/* <h1
-                    className='text-white flex font-extrabold text-2xl ml-10'
-                    >@{userdata?.name ? (userdata?.name) : (userdata?.userData?.name)}</h1> */}
-                    <div className='w-full h-auto flex flex-wrap justify-center gap-5 flex-row items-center'>
-                        {
-                            myPosts?.map((post)=>(
-                                
-                                <div key={post.title}>
-                                    <PostCard post={post}/>
+                    {
+                        myPosts?.length === 0 ? (
+                            <>
+                                 <div className='flex flex-col justify-center items-center h-[400px] gap-5'>
+                                    <h1 className='text-2xl font-bold text-white'>You have not created any post yet</h1>
+                                    <button className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600'
+                                        onClick={handlecreatePost}>
+                                        Add post
+                                    </button>
                                 </div>
-                            ))
-                        }
-                    </div>
+                            </>
+                            
+                        ) : (
+                            <>
+                                <div className='w-full h-auto flex flex-wrap justify-center gap-5 flex-row items-center'>
+                                {
+                                    myPosts?.map((post)=>(
+                                        
+                                        <div key={post.title}>
+                                            <PostCard post={post}/>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                            </>
+                            
+
+                        )
+                    
+                    }
                 </>
                 
             )}

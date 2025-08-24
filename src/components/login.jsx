@@ -39,7 +39,7 @@ function Login() {
                 }
             </div>
             
-            <div className='flex justify-center'>
+            <div className='flex justify-center h-[378px] items-center '>
                 
                 <div className='bg-white w-[400px] h-[300px] flex justify-center rounded-2xl flex-col'>
                     

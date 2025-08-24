@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     return (
         <>
-            <div className='flex justify-between bg-white w-full mt-10 mx-0 bottom-0 left-0 py-10 px-30 border border-t-gray-500'>
+            <div className='flex justify-between mb-0 bg-white w-full mt-10 mx-0 bottom-0 left-0 py-10 px-30 border border-t-gray-500'>
                 <div>
                         <img src="https://cdn.pixabay.com/photo/2017/05/17/15/20/kids-2321161_1280.png" alt="logo"
                         className='h-8 w-8 object-cover center'

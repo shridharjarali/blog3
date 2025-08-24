@@ -88,7 +88,7 @@ function Home() {
 
                 <>
                 
-                        <div className='flex flex-col justify-center items-center'>
+                        <div className='flex flex-col justify-center items-center h-[400px]'>
                             <div className='mb-10'>
                                 <p
                                 className='font-extrabold text-4xl text-white'

@@ -32,7 +32,7 @@ function SignUp() {
 
     return (
         <>
-        <div className='flex justify-center'>
+        <div className='flex justify-center h-[400px] items-center '>
             
             <div className='bg-white w-[400px] h-auto flex justify-center rounded-2xl flex-col'>
                 {error && 
