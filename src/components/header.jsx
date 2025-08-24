@@ -6,10 +6,10 @@ import { store } from '../store/store'
 import { useEffect } from 'react';
 
 function Header() {
-    console.log("in header");
+    // console.log("in header");
         
     const authStatus = useSelector((state)=> state.status)
-    console.log(authStatus);
+    // console.log(authStatus);
     const userdata = useSelector((state)=>state.userData)
     
     const navigate = useNavigate()

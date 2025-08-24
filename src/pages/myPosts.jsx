@@ -10,7 +10,7 @@ function MyPosts() {
     const [myPosts,setMyPosts] = useState([])
     const [loader,setLoader] = useState(true)
     const userdata = useSelector((state)=>state.userData)
-    console.log(userdata);
+    // console.log(userdata);
     
     
     useEffect(()=>{
@@ -38,7 +38,7 @@ function MyPosts() {
         }
         
     },[]) 
-    console.log(myPosts);
+    // console.log(myPosts);
 
     const handlecreatePost = ()=>{
         navigate('/addPost')

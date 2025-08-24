@@ -101,7 +101,7 @@ export class Service{
     }
 
     async deleteFile(fileID){
-        console.log(this.storage.deleteFile(Config.appWriteBucketID,fileID));
+        // console.log(this.storage.deleteFile(Config.appWriteBucketID,fileID));
         
         try {
             return await this.storage.deleteFile(Config.appWriteBucketID,fileID)

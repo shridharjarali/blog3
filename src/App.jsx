@@ -31,11 +31,11 @@ function App() {
     authServise.getCurrentUser()
     .then((userData)=>{
       if (userData) {
-        console.log("login");
+        // console.log("login");
         dispatch(login({userData}))
       }
       else{
-        console.log("logout");
+        // console.log("logout");
         dispatch(logout())
       }
     })

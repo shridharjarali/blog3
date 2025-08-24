@@ -12,7 +12,7 @@ function Post() {
       const userdata = useSelector((state)=>state.userData)
       const navigate = useNavigate()
 
-  console.log(post);
+//   console.log(post);
 
   const handleDelete = ()=>{
         service.deletePost(post.post.$id).then((status) => {

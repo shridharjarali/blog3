@@ -17,7 +17,7 @@ export class AuthServise {
         async createAccount({email,password,name})
         {
             try {
-                console.log("create account");
+                // console.log("create account");
                 
                 const userAcc = await this.account.create(ID.unique(),email,password,name)
                 return this.login({email,password})
@@ -28,8 +28,8 @@ export class AuthServise {
 
         async login({email,password}){
             try {
-                console.log(email);
-                console.log(password);
+                // console.log(email);
+                // console.log(password);
                 
                 return await this.account.createEmailPasswordSession(email,password)
             } catch (error) {
@@ -42,13 +42,13 @@ export class AuthServise {
             try {
                 return await this.account.get()
             } catch (error) {
-                console.log(error);
+                // console.log(error);
                 return false;
             }
         }
 
         async logout(){
-            console.log("servise logout");
+            // console.log("servise logout");
             
             try {
                 return await this.account.deleteSessions()
